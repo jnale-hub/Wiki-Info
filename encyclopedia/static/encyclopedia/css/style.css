@@ -9075,7 +9075,7 @@ h1, h2, h3, h4, h5,
 #sidebar h1 {
   margin-bottom: 20px;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 26px;
 }
 #sidebar h1 .logo {
   color: #fff;
@@ -9219,9 +9219,7 @@ a[data-toggle=collapse] {
   background: #4897fc;
 }
 
-textarea {
+.textarea {
   width: 90%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: auto;
 }/*# sourceMappingURL=style.css.map */
