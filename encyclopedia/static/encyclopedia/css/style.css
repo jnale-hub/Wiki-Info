@@ -9,7 +9,7 @@ body {
 
 a {
   transition: 0.3s all ease;
-  color: #2f89fc;
+  color: rgb(176, 84, 32);
 }
 a:hover, a:focus {
   text-decoration: none !important;
@@ -90,7 +90,7 @@ h1, h2, h3, h4, h5,
   color: white;
   display: block;
   padding: 10px 30px;
-  background: #2f89fc;
+  background: rgb(176, 84, 32);
 }
 #sidebar ul.components {
   padding: 0;
@@ -112,16 +112,16 @@ h1, h2, h3, h4, h5,
 }
 #sidebar ul li a:hover {
   color: white;
-  background: #2f89fc;
-  border-bottom: 1px solid #2f89fc;
+  background: rgb(176, 84, 32);
+  border-bottom: 1px solid rgb(176, 84, 32);
 }
 #sidebar ul li.active > a {
   background: transparent;
   color: white;
 }
 #sidebar ul li.active > a:hover {
-  background: #2f89fc;
-  border-bottom: 1px solid #2f89fc;
+  background: rgb(176, 84, 32);
+  border-bottom: 1px solid rgb(176, 84, 32);
 }
 #sidebar .custom-menu {
   display: inline-block;
@@ -163,12 +163,12 @@ a[data-toggle=collapse] {
 }
 
 .btn.btn-primary {
-  background: #2f89fc;
-  border-color: #2f89fc;
+  background: rgb(176, 84, 32);
+  border-color: rgb(176, 84, 32);
 }
 .btn.btn-primary:hover, .btn.btn-primary:focus {
-  background: #2f89fc !important;
-  border-color: #2f89fc !important;
+  background: rgb(176, 84, 32) !important;
+  border-color: rgb(176, 84, 32) !important;
 }
 
 .footer p {
@@ -201,7 +201,7 @@ a[data-toggle=collapse] {
 }
 
 .subscribe-form .form-control {
-  background: #4897fc;
+  background: #c65e24;
 }
 
 .textarea {

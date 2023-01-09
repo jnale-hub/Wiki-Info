@@ -62,17 +62,17 @@ def search(request):
         else:
             allEntries = util.list_entries()
             recommendation = []
-            for entry in allEntries:
+            for entry in allEntries: 
                 if entry_search.lower() in entry.lower():
                     recommendation.append(entry)
-                else:
-                    return render(request, "encyclopedia/error.html", {
-                        "message": "There is no result. <a href='../new/'>Try to add an entry</a>"
-                    })
-            return render(request, "encyclopedia/search.html", {
-                "recommendation": recommendation
-            })
-
+            if recommendation is None:
+                return render(request, "encyclopedia/error.html", {
+                    "message": "There is no result. <a href='../new/'>Try to add an entry</a>"
+                })
+            else:
+                return render(request, "encyclopedia/search.html", {
+                    "recommendation": recommendation
+                })
 
 
 
