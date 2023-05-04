@@ -67,7 +67,8 @@ def search(request):
                     recommendation.append(entry)
             if not recommendation:
                 return render(request, "encyclopedia/error.html", {
-                    "message": "There is no result. <a href='../new/'>Try to add an entry</a>"
+                    "entry_search": entry_search,
+                    "message": f'There is no result for <b>"{entry_search}"</b>. <a href="../new/">Try to add an entry</a>',
                 })
             else:
                 return render(request, "encyclopedia/search.html", {
@@ -87,7 +88,7 @@ def new_page(request):
         # Deliver an error message if there is an existing entry
         if titleExist is not None:
             return render(request, "encyclopedia/error.html", {
-                "message": "Entry page already exist"
+                "message": "Entry page already exist."
             })
         else:
             util.save_entry(title, content)

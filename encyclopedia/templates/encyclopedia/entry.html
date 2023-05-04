@@ -5,10 +5,11 @@
 {% endblock %}
 
 {% block body %}
-    {{ content | safe }}
-    <form action="{% url 'edit' %}" method="POST">
+<div class="container-fluid">{{ content | safe }}</div>
+    
+    <form action="{% url 'edit' %}" method="POST" class="mr-auto">
         {% csrf_token %}
         <input type="hidden" name="entry_title" value="{{ title }}">
-        <input type="submit" value="Edit" class="btn btn-danger">
+        <input type="submit" value="Edit" class="btn btn-primary rounded-end float-right mb-5">
     </form>
 {% endblock %}
