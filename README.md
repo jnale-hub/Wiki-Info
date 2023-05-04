@@ -43,18 +43,6 @@ The aim of this project was to build a Wikipedia-like online encyclopedia using 
 * Random Page: Clicking “Random Page” in the sidebar should take user to a random encyclopedia entry.
 * Markdown to HTML Conversion: On each entry’s page, any Markdown content in the entry file should be converted to HTML before being displayed to the user. You may use the python-markdown2 package to perform this conversion, installable via pip3 install markdown2.
 
-### Project Writeup:
-
-This project is a Wikipedia style encyclopedia website called Qwikipedia, built using the Django web framework.
-
-On the main page of the website, users are greeted with a welcome message and a list of links to all the articles currently available on the website.
-
-Clicking any of the article links, or visiting the /wiki/title route, will display the article for 'title' if it exists. If an article named 'title' does not exist, users are brought to an error page and possibly related article links are given to the user.
-
-A search bar is available at all times on the site that users can utilise to search for an article in the encyclopedia. If the user types in the exact title of an article available on qwikipedia, they are taken directly to the article page. Otherwise, if any articles with titles similar to the search string exist on the site, a list of search results is displayed to the user. If no similarly named titles are found by the search, the user is informed of this and directed to the index page where a list of all available articles can be found.
-
-Users can create a brand new page by clicking on the 'Create New Page' link. This takes the user to a page with a form to input the name for the title article, as well as the article contents. A button on the page submits the form. If the form is filled in correctly, and no article currently exists with the title given, the new article page is created and the user is redirected to the new article page. Otherwise, if an article with the same title already exists, users are returned to the 'Create New Page' form with their input text, and advised that rather than create a new page, they should instead go to the title page and edit it.
-
 When viewing any article on the site, an 'Edit Page' button is available. Clicking this takes users to a page with a form, allowing them to edit the contents of the article. When the form is updated and submited, the user is returned back to the updated article page.
 
 Finally a 'Random Page' link is available in the side bar which when clicked will randomly select an article from all those available on the site and redirect the user to the selected article page.
