@@ -25,7 +25,8 @@ def index(request):
     the list_entries function from util.
     """
     return render(request, "encyclopedia/index.html", {
-        "entries": util.list_entries()
+        "entries": util.list_entries(),
+        'active_page': 'home'
     })
 
 
@@ -80,7 +81,7 @@ def search(request):
 def new_page(request):
     # Function to create a new page
     if request.method == "GET":
-        return render(request, "encyclopedia/new.html")
+        return render(request, "encyclopedia/new.html", {'active_page': 'new_page'})
     else:
         title = request.POST['title']
         content = request.POST['content']
@@ -95,7 +96,7 @@ def new_page(request):
             html_content = convert_md_to_html(title)
             return render(request, "encyclopedia/entry.html", {
                 "title": title,
-                "content": html_content
+                "content": html_content,
             })
 
 
@@ -127,5 +128,6 @@ def rand(request):
     html_content = convert_md_to_html(rand_entry)
     return render(request, "encyclopedia/entry.html", {
         "title": rand_entry,
-        "content": html_content
+        "content": html_content,
+        'active_page': 'rand'
     })
