@@ -15,7 +15,7 @@ The aim of this project was to build an online encyclopedia using the Python Dja
 * HTML
 * CSS
 * Bootstrap
-* 
+
 ## Implementation.
 
 ### Entry Page
