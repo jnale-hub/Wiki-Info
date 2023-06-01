@@ -5,11 +5,12 @@
 {% endblock %}
 
 {% block body %}
-    <h3>Search recommendations...</h3>
-    <ul>
+    <h4>Search recommendations...</h4>
+    <div class="entry-list">
         {% for entry in recommendation %}
-            <li><a href="{% url 'entry' title=entry %}">{{ entry }}</a></li>
+        <div class="entry-item">
+            <a href="{% url 'entry' title=entry %}">{{ entry }}</a>
+        </div>
         {% endfor %}
-    </ul>
-
+    </div>
 {% endblock %}

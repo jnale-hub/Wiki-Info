@@ -5,18 +5,25 @@ Encyclopedia
 {% endblock %}
 
 {% block body %}
-<h3> Welcome to <span class="">Wiki-Info!</span></h3>
+<div class="landing-page">
+    <h2>Welcome to <span class="highlight">Wiki-Info!</span></h2>
 
-<p>This Project is an online encyclopedia using the Python Django framework. 
-    Users can view available article entries,
-    as well as search for entries on the site. New entries can be created by users, and existing entries can be edited.
-    There is also a 'random page' function that selects and displays a page of the encyclopedia at random. </p>
-<h3>All Pages:</h3>
+    <p>
+        This Project is an online encyclopedia using the Python Django framework.
+        Users can view available article entries, as well as search for entries on the site.
+        New entries can be created by users, and existing entries can be edited.
+        There is also a 'random page' function that selects and displays a page of the encyclopedia at random.
+    </p>
 
-<ul>
-    {% for entry in entries %}
-    <li><a href="{% url 'entry' title=entry %}">{{ entry }}</a></li>
-    {% endfor %}
-</ul>
+    <h3>All Pages:</h3>
+    <div class="entry-list">
+        {% for entry in entries %}
+        <div class="entry-item">
+            <a href="{% url 'entry' title=entry %}">{{ entry }}</a>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
 
 {% endblock %}

@@ -1,15 +1,18 @@
 {% extends "encyclopedia/layout.html" %}
 
 {% block title %}
-    {{ title }}
+{{ title }}
 {% endblock %}
 
 {% block body %}
-<div class="container-fluid">{{ content | safe }}</div>
-    
-    <form action="{% url 'edit' %}" method="POST" class="mr-auto">
+<div class="container-fluid entry-page">{{ content | safe }}</div>
+
+<div class="mr-auto">
+    <form action="{% url 'edit' %}" method="POST">
         {% csrf_token %}
         <input type="hidden" name="entry_title" value="{{ title }}">
-        <input type="submit" value="Edit" class="btn btn-primary rounded-end float-right mb-5">
+        <input type="submit" value="Edit" class="btn btn-primary rounded-end float-right">
     </form>
+</div>
+
 {% endblock %}

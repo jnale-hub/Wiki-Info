@@ -1,3 +1,8 @@
+body {
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
 .input-group {
   width: 90%;
 }
@@ -27,9 +32,9 @@
   border-radius: 0 0.25rem 0.25rem 0;
 }
 
-body {
-  max-width: 85%;
-  margin: 0 auto;
+
+.navbar {
+  margin: 0 8% 15px 8%;
 }
 
 .navbar-brand {
@@ -49,6 +54,10 @@ body {
   font-size: 0.95rem !important;
 }
 
+.page-content {
+  margin: auto 10% !important;
+}
+
 .form-group {
   margin-bottom: 2rem;
 }
@@ -56,4 +65,125 @@ body {
 .btn {
   background-color: #5CB85C;
   border-color: #5CB85C;
+}
+
+.entry-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.entry-item {
+  margin-bottom: 10px;
+}
+
+.entry-item a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+  padding: 12px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+}
+
+.entry-item a:hover {
+  background-color: #e0e0e0;
+}
+
+.landing-page {}
+
+.landing-page h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.landing-page h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.landing-page p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  padding: auto;
+  text-indent: 20px;
+}
+
+/* Styles for the blog-like appearance */
+.entry-page {
+
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.entry-page h1,
+.entry-page h2,
+.entry-page h3,
+.new-page h3,
+.edit-page h3,
+.entry-page h4,
+.entry-page h5,
+.entry-page h6 {
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.entry-page p {
+  margin-bottom: 20px;
+}
+
+.entry-page img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 20px auto;
+}
+
+.entry-page a {
+  color: #337ab7;
+  text-decoration: none;
+}
+
+.entry-page a:hover {
+  text-decoration: underline;
+}
+
+.entry-page ul,
+.entry-page ol {
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+.entry-page li {
+  margin-bottom: 10px;
+}
+
+/* Styles for the footer */
+.footer {
+  background-color: #f5f5f5;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer p {
+  margin-bottom: 10px;
+}
+
+.footer a {
+  color: #337ab7;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer .fa {
+  font-size: 20px;
+  margin-right: 5px;
+  vertical-align: middle;
 }

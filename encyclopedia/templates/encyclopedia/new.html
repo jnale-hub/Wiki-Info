@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block body %}
-<div class="">
+<div class="new-page">
     <h3 class="text-center">New Page</h3>
     <form action="{% url 'new_page' %}" method="POST">
       {% csrf_token %}

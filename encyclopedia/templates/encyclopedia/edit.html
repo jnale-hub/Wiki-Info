@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block body %}
-    <div class="container">
+    <div class="container edit-page">
         <h3 class="text-center">Edit Page</h3>
         <form action="{% url 'save_edit' %}" method="POST">
           {% csrf_token %}
