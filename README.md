@@ -5,7 +5,7 @@ An online encyclopedia using the Python Django framework.
 
 The aim of this project was to build an online encyclopedia using the Python Django framework. Users can view available article entries, as well as search for entries on the site. New entries can be created by users, and existing entries can be edited. There is also a 'random page' function that selects and displays a page of the encyclopedia at random.
 
-<img src="wiki-info-landing.png" alt="Screenshot of the project">
+<!-- <img src="wiki-info-landing.png" alt="Screenshot of the project"> -->
 
 <img src="wiki-info.png" alt="Screenshot of the project">
 
