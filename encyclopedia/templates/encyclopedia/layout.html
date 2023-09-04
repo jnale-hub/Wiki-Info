@@ -18,7 +18,6 @@
   <link href="{% static 'encyclopedia/css/style.css' %}" rel="stylesheet">
   <script src="{% static 'encyclopedia/js/main.js' %}"></script>
   <link rel="shortcut icon" type="image/x-icon" href="{% static 'encyclopedia/wiki-info.ico' %}">
-
 </head>
 
 <body>
@@ -57,11 +56,10 @@
 
 
   <!-- Page Content  -->
-  <div id="content" class="page-content p-3 px-lg-3 my-lg-4 mx-lg-5 border-left">
+  <article id="content" class="container pb-5">
     {% block body %}
     {% endblock %}
-  </div>
-
+  </article>
 
   <footer class="footer mt-5">
     <p>&copy; 2023 | John Mark Delima</p>
@@ -71,7 +69,6 @@
     <a href="https://github.com/jnale-hub" target="_blank">
       <span class="fa fa-github"></span>
     </a>
-
   </footer>
 
 </body>
