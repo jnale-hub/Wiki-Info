@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from markdown2 import Markdown
 import random
+from urllib.parse import unquote
 
 from . import util
 
@@ -27,6 +28,9 @@ def entry(request, title):
     """
     Render an entry by converting its Markdown content to HTML.
     """
+    # Remove spaces and decode any URL-encoded spaces from the title
+    title = unquote(title.replace(" ", "%20"))
+
     # Try to find an exact match for the provided title
     html_content = convert_md_to_html(title)
 
