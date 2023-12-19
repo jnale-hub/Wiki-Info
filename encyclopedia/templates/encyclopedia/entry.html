@@ -11,7 +11,9 @@
     <form action="{% url 'edit' %}" method="POST">
         {% csrf_token %}
         <input type="hidden" name="entry_title" value="{{ title }}">
+        <div class="d-flex justify-content-end">
         <input type="submit" value="Edit" class="btn btn-primary rounded-end float-right">
+        </div>
     </form>
 </div>
 
