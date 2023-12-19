@@ -53,7 +53,7 @@ body {
   margin: auto 10% !important;
 }
 
-#content {
+main {
   min-height: 100vh;
 }
 
