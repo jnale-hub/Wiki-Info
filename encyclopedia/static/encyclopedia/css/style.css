@@ -53,6 +53,10 @@ body {
   margin: auto 10% !important;
 }
 
+#content {
+  min-width: 100vh;
+}
+
 .form-group {
   margin-bottom: 2rem;
 }
