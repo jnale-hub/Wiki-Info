@@ -54,7 +54,7 @@ body {
 }
 
 #content {
-  min-width: 100vh;
+  min-height: 100vh;
 }
 
 .form-group {
