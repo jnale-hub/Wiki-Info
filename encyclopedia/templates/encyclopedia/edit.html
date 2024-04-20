@@ -1,24 +1,31 @@
 {% extends "encyclopedia/layout.html" %}
-
-{% block title %}
-    Edit Page | Wiki-Info
-{% endblock %}
-
+{% block title %}Edit Page | Wiki-Info{% endblock %}
 {% block body %}
-    <div class="container edit-page">
-        <h3 class="text-center">Edit Page</h3>
-        <form action="{% url 'save_edit' %}" method="POST">
-          {% csrf_token %}
-          <div class="form-group">
-            <label for="title">Title:</label>
-            <input type="text" class="form-control" id="title" name="title" placeholder="Enter a title" value="{{ title }}">
-          </div>
-          <div class="form-group">
-            <label for="content">Markdown Content:</label>
-            <textarea class="form-control" id="content" name="content" rows="8" placeholder="Write your content (in markdown)">{{ content }}</textarea>
-          </div>
-          <button type="submit" class="btn btn-primary rounded-end float-right">Edit</button>
+    <div class="max-w-7xl mx-auto p-5">
+        <h3 class="text-3xl font-extrabold text-center tracking-wider my-8">Edit Page</h3>
+        <form action="{% url 'save_edit' %}" method="POST" class="grid space-y-8">
+            {% csrf_token %}
+            <div class="grid gap-5">
+                <label for="title" class="text-lg font-bold">Title:</label>
+                <input type="text"
+                       class="px-5 py-2"
+                       id="title"
+                       name="title"
+                       placeholder="Enter a title"
+                       value="{{ title }}">
+            </div>
+            <div class="grid gap-5">
+                <label for="content" class="text-lg font-bold">Markdown Content:</label>
+                <textarea class="px-5 py-2"
+                          id="content"
+                          name="content"
+                          rows="8"
+                          placeholder="Write your content (in markdown)">{{ content }}</textarea>
+            </div>
+            <button type="submit"
+                    class="px-5 py-3 bg-indigo-600 text-indigo-50 block mr-auto rounded-lg text-lg shadow-sm">
+                Edit
+            </button>
         </form>
-      </div>
-
+    </div>
 {% endblock %}

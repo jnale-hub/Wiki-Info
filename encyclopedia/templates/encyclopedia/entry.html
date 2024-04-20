@@ -1,20 +1,16 @@
 {% extends "encyclopedia/layout.html" %}
-
-{% block title %}
-{{ title }}
-{% endblock %}
-
+{% block title %}{{ title }}{% endblock %}
 {% block body %}
-<div class="container-fluid entry-page">{{ content | safe }}</div>
-
-<div class="mr-auto">
-    <form action="{% url 'edit' %}" method="POST">
-        {% csrf_token %}
-        <input type="hidden" name="entry_title" value="{{ title }}">
-        <div class="d-flex justify-content-end">
-        <input type="submit" value="Edit" class="btn btn-primary rounded-end float-right">
+    <div class="max-w-7xl mx-auto">
+        <article class="max-w-5xl prose py-10 [&_img]:mx-auto p-5">{{ content | safe }}</article>
+        <div class="">
+            <form action="{% url 'edit' %}" method="POST">
+                {% csrf_token %}
+                <input type="hidden" name="entry_title" value="{{ title }}">
+                <input type="submit"
+                       value="Edit"
+                       class="px-5 py-3 bg-indigo-600 text-indigo-50 block ml-auto rounded-lg text-lg shadow-sm">
+            </form>
         </div>
-    </form>
-</div>
-
+    </div>
 {% endblock %}

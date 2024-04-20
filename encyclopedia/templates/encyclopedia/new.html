@@ -1,26 +1,32 @@
 {% extends "encyclopedia/layout.html" %}
-
-{% block title %}
-Create New Page | Wiki-Info
-{% endblock %}
-
+{% block title %}Create New Page | Wiki-Info{% endblock %}
 {% block body %}
-<div class="new-page">
-    <h3 class="text-center">New Page</h3>
-    <form action="{% url 'new_page' %}" method="POST">
-      {% csrf_token %}
-      <div class="form-group">
-        <label for="title">Title:</label>
-        <input type="text" class="form-control" id="title" name="title" placeholder="Enter a title">
-      </div>
-      <div class="form-group">
-        <label for="content">Markdown Content:</label>
-        <textarea class="form-control" id="content" name="content" rows="8" placeholder="Write your content (in markdown)"></textarea>
-      </div>
-      <div class="d-flex justify-content-end">
-      <button type="submit" class="btn btn-primary rounded-end">New Page</button>
-      </div>
-    </form>
-  </div>
-
+    <div class="max-w-7xl mx-auto p-5">
+        <h3 class="text-3xl font-extrabold text-center tracking-wider my-8">
+            <span class="text-indigo-600">New</span> Page
+        </h3>
+        <form action="{% url 'new_page' %}" method="POST" class="grid space-y-8">
+            {% csrf_token %}
+            <div class="grid gap-5">
+                <label for="title" class="text-lg font-bold">Title:</label>
+                <input type="text"
+                       class="px-5 py-2"
+                       id="title"
+                       name="title"
+                       placeholder="Enter a title">
+            </div>
+            <div class="grid">
+                <label for="content" class="text-lg font-bold">Markdown Content:</label>
+                <textarea class="px-5 py-2"
+                          id="content"
+                          name="content"
+                          rows="8"
+                          placeholder="Write your content (in markdown)"></textarea>
+            </div>
+            <button type="submit"
+                    class=" px-5 py-3 bg-indigo-600 text-indigo-50 block mr-auto rounded-lg text-lg shadow-sm">
+                New Page
+            </button>
+        </form>
+    </div>
 {% endblock %}

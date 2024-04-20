@@ -1,6 +1,6 @@
 ### CSS
 
-CSS is a language that can be used to add style to an HTML page. It is used to define the layout, colors, fonts, and other visual elements of a web page. 
+CSS is a language that can be used to add style to an HTML page. It is used to define the layout, colors, fonts, and other visual elements of a web page.
 
 ##### Cascading Style Sheets
 
