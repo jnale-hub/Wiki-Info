@@ -1,0 +1,31 @@
+<nav class="shadow bg-white">
+    <div class="container mx-auto flex flex-col md:flex-row md:justify-between items-center md:gap-5 px-5 p-3 max-w-7xl">
+        <a class="text-xl font-extrabold shrink-0 p-3 tracking-wider" href="{% url 'index' %}">wiki<span
+                class="text-indigo-600">Info</span></a>
+        <ul class="flex gap-5 font-semibold [&_li]:py-4">
+            <li class="border-b-2 hover:border-indigo-600 hover:text-indigo-600 border-transparent">
+                <a class="" href="{% url 'index' %}">Home</a>
+            </li>
+            <li class="border-b-2 hover:border-indigo-600 hover:text-indigo-600 border-transparent">
+                <a class="" href="{% url 'new_page' %}"><span class="fa fa-pencil"></span> Create New
+                    Page</a>
+            </li>
+            <li class="border-b-2 hover:border-indigo-600 hover:text-indigo-600 border-transparent">
+                <a class="" href="{% url 'rand' %}"><span class="fa fa-random"></span> Random Page</a>
+            </li>
+        </ul>
+        <form class="flex items-center gap-3" action="{% url 'search' %}" method="POST">
+            {% csrf_token %}
+            <div class="border rounded overflow-hidden flex">
+                <input type="search" class="px-4 py-2 focus:outline-indigo-600" placeholder="Search..." name="q">
+                <button class="flex items-center justify-center px-4 bg-indigo-600" type="submit">
+                    <svg class="h-4 w-4 text-indigo-50" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24">
+                        <path
+                            d="M16.32 14.9l5.39 5.4a1 1 0 0 1-1.42 1.4l-5.38-5.38a8 8 0 1 1 1.41-1.41zM10 16a6 6 0 1 0 0-12 6 6 0 0 0 0 12z" />
+                    </svg>
+                </button>
+            </div>
+        </form>
+    </div>
+</nav>

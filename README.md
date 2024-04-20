@@ -12,11 +12,10 @@ For a detailed description of the assignment, you can refer to the [CS50's OpenC
 
 ## Technologies
 
-- Python Django
+- Django
 - JavaScript
 - HTML
-- CSS
-- Bootstrap
+- TailwindCSS
 
 ## Implementation
 

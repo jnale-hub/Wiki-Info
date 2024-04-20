@@ -1,27 +1,25 @@
 {% extends "encyclopedia/layout.html" %}
-
-{% block title %}
-Wiki-Info
-{% endblock %}
-
+{% block title %}Wiki-Info{% endblock %}
 {% block body %}
-<div class="landing-page">
-    <h2>Welcome to <span class="highlight">Wiki-Info!</span></h2>
-
-    <p>
-        This project is an online encyclopedia using the Python Django framework. Users can view, search, create, and
-        edit article entries. It also features a 'random page' function for a serendipitous browsing experience.
-    </p>
-
-    <h3>All Pages:</h3>
-    <div class="entry-list">
-        {% for entry in entries %}
-        <div class="entry-item">
-            <a href="{% url 'entry' title=entry %}">{{ entry }}</a>
+    <section class="bg-indigo-100">
+        <div class="p-5 md:p-10 max-w-7xl mx-auto">
+            <h2 class="md:text-5xl text-3xl font-extrabold py-5 tracking-wider">
+                Welcome to Wiki<span class="text-indigo-600">Info!</span>
+            </h2>
+            <h4 class="md:text-2xl text-lg">
+                This project is an online encyclopedia using the Python Django framework. Users can view, search, create,
+                and
+                edit article entries. It also features a 'random page' function for a serendipitous browsing experience.
+            </h4>
         </div>
-        {% endfor %}
-    </div>
-
-</div>
-
+    </section>
+    <section class="p-5 py-10">
+        <h3 class="text-3xl font-extrabold text-indigo-600 text-center tracking-wider mb-8">All Pages:</h3>
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-5 max-w-7xl mx-auto">
+            {% for entry in entries %}
+                <a href="{% url 'entry' title=entry %}"
+                   class="shadow-md  hover:shadow-lg  transition text-indigo-700 text-xl font-bold p-5 md:py-8 text-center bg-indigo-100 rounded  place-items-center">{{ entry }}</a>
+            {% endfor %}
+        </div>
+    </section>
 {% endblock %}

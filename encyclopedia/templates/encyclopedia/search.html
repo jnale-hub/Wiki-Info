@@ -1,16 +1,12 @@
 {% extends "encyclopedia/layout.html" %}
-
-{% block title %}
-    Search | Wiki-Info
-{% endblock %}
-
+{% block title %}Search | Wiki-Info{% endblock %}
 {% block body %}
     <h4>Search recommendations...</h4>
     <div class="entry-list">
         {% for entry in recommendation %}
-        <div class="entry-item">
-            <a href="{% url 'entry' title=entry %}">{{ entry }}</a>
-        </div>
+            <div class="entry-item">
+                <a href="{% url 'entry' title=entry %}">{{ entry }}</a>
+            </div>
         {% endfor %}
     </div>
 {% endblock %}
